@@ -32,6 +32,8 @@ module.exports = {
         'ong.whatsapp',
         'ong.city',
         'ong.uf']);
+
+        console.log(incidents);
         return response.json(incidents);
     },  
 
