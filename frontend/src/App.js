@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import './global.css';
+import Routes from './routes/routes';
 
 function App() {
+
+  return(
+    <Routes />
+  );
+
+ /*  const user = "Ravel";
+  const [counter, setCounter] = useState(0); // returns Array[value, functionUpdate]
+
+  function increment(){
+    setCounter( counter + 1); // Alter the state of const Counter using the function setCounter
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header>
+        Contador = {counter}
+      </Header> 
+      <button onClick= {increment}>Incrementar</button>
     </div>
-  );
+  ); */
 }
 
 export default App;

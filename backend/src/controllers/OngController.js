@@ -19,7 +19,7 @@ module.exports = {
     },
 
     async listAll (request,response){
-        const {page = 1} = request.query;
+       // const {page = 1} = request.query;
 
         const ongs = await conn('ong')
         .limit(5)
