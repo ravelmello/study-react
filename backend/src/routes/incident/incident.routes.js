@@ -6,8 +6,15 @@ const ProfileController = require('../../controllers/ProfileController')
 const incidentRoutes = express.Router();
 
 
-//TODO criar validação de rota de criação
-incidentRoutes.post('/incident', IncidentController.create);
+incidentRoutes.post('/incident', 
+celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+        title: Joi.string().required().max(200),
+        description: Joi.string().required(),
+        value: Joi.number().required()
+    })
+}), 
+IncidentController.create);
 
 incidentRoutes.get('/incident', celebrate({
     [Segments.QUERY] : Joi.object().keys({
