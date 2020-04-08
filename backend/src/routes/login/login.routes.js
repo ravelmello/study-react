@@ -7,10 +7,10 @@ const logingRoutes = express.Router();
 
 
 logingRoutes.post('/login', celebrate({
-    [Segments.HEADERS]: Joi.object({
-        Authorization: Joi.string().required()
+    [Segments.BODY]: Joi.object({
+        id: Joi.string().required().min(8).max(8)
     }).unknown()
 }),LoginController.create);
 
-
+                                           
 module.exports = logingRoutes;
